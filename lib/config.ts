@@ -1,0 +1,8 @@
+export const M500_TREASURY =
+  "D9yQWiRTFiiBYrRSpUoSezYSKkA4iV2uyS9UGdLY9RFL";
+
+  export const M500_ADMIN =
+  "D9yQWiRTFiiBYrRSpUoSezYSKkA4iV2uyS9UGdLY9RFL";
+  export const ADMIN_WALLET = "D9yQWiRTFiiBYrRSpUoSezYSKkA4iV2uyS9UGdLY9RFL";
+
+  export const M500_SUPPORT_WALLET = "FyXrjSjTefUPQLX5vL4KfH2f8HrcdobhUePKUVVERwpZ";

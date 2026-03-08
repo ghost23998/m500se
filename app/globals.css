@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: white;
+}
+@keyframes glow {
+  0% { text-shadow: 0 0 10px rgba(56,189,248,0.5); }
+  50% { text-shadow: 0 0 30px rgba(56,189,248,0.9); }
+  100% { text-shadow: 0 0 10px rgba(56,189,248,0.5); }
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.slow-zoom {
+  animation: slowZoom 20s ease-in-out infinite;
+}
+.glow-text {
+  animation: glow 3s ease-in-out infinite;
+}
+body {
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(59, 130, 246, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(0, 191, 255, 0.12),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #050816 0%,
+      #0a1225 40%,
+      #081221 100%
+    );
+
+  background-attachment: fixed;
+}
+.neon-grid {
+  background-image:
+    linear-gradient(rgba(56,189,248,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
