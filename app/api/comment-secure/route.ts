@@ -3,13 +3,16 @@ import nacl from "tweetnacl";
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
+export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   try {
+
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL || "",
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+    );
+
     const body = await req.json();
     const { wallet, proposalId, content, message, signature } = body;
 
